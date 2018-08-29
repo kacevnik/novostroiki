@@ -1,0 +1,9 @@
+/************* Header ***************/
+
+header{
+    background: rgba(0,63,79,0.1);
+    padding: 15px 0px 10px 0px;
+    border-top: 5px solid rgba(0,0,0,0.1);
+    z-index: 2;
+    position: relative;
+}
