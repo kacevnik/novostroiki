@@ -12,8 +12,10 @@
 </head>
 <body <?php body_class(); ?>>
     <header>
-        <?php
-        $args = array('theme_location' => 'top', 'container'=> 'nav', 'menu_class' => 'bottom-menu', 'menu_id' => 'bottom-nav');
-        wp_nav_menu($args);
-        ?>
+        <div class="container">
+            <?php
+            $args = array('theme_location' => 'top', 'container'=> 'nav', 'menu_class' => 'bottom-menu', 'menu_id' => 'bottom-nav');
+            wp_nav_menu($args);
+            ?>
+        </div>
     </header>
