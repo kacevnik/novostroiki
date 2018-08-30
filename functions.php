@@ -1,5 +1,7 @@
 <?php
 
+    require get_template_directory() . '/includes/admit-setigs.php';
+
     add_action('after_setup_theme', function(){
         register_nav_menus( array(
             'top'    => 'Меню в Header',
