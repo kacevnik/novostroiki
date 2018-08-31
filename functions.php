@@ -1,6 +1,7 @@
 <?php
 
-    require get_template_directory() . '/includes/admit-setigs.php';
+    require get_template_directory() . '/includes/admin-settings.php';
+    require get_template_directory() . '/includes/enqueue.php';
 
     add_action('after_setup_theme', function(){
         register_nav_menus( array(
@@ -29,5 +30,11 @@
             wp_enqueue_style('media', get_template_directory_uri().'/css/media.css', array(), '1.0.0', 'all'); // адаптивные стили
         }
     }
+
+    function change_admin_footer () {
+        return '<i>Спасибо вам за творчество с <a href="http://wordpress.org">WordPress</a>; Всегда Ваш: <a href="https://www.fl.ru/users/kacevnik/">Дмитрий Ковалев</a></i>';
+    }
+
+    add_filter('admin_footer_text', 'change_admin_footer');
 
 ?>
